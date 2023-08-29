@@ -9,7 +9,7 @@
 dotfiles_dir=$(dirname "$0") # dotfiles directory
 dotfiles_path=$(realpath "$dotfiles_dir") # dotfiles directory path
 backup_path=${dotfiles_path}/backup # backup directory path
-files="nano bash_aliases git_aliases nanorc" # list of files/folders to symlink in homedir
+files="bash_aliases curlrc git_aliases nano nanorc" # list of files/folders to symlink in homedir
 
 ##########
 
