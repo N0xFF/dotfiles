@@ -5,7 +5,7 @@ alias l='ls -CF'
 
 alias top='top -o cpu'
 
-alias qc='QC_MEASURE=true DEBUG=true QUEUE=mailers,default bundle exec rake qc:work'
+alias qc='QC_MEASURE=true DEBUG=true QUEUES="mailers,default" bundle exec rake qc:work'
 
 alias kill-spring='for pid in $(ps -ef | awk "/spring/ {print \$2}"); do kill -9 $pid; done'
 
