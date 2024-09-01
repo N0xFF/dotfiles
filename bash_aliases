@@ -1,7 +1,20 @@
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# ls aliases
+# alias ll='ls -alF'
+# alias la='ls -A'
+# alias l='ls -CF'
+
+# lists only directories (no files)
+alias ld='eza -lD'
+# lists only files (no directories)
+alias lf='eza -lf --color=always | grep -v /'
+# lists only hidden files (no directories)
+alias lh='eza -dl .* --group-directories-first'
+# lists everything with directories first
+alias ll='eza -al --group-directories-first'
+# lists only files sorted by size
+# alias ls='eza -alf --color=always --sort=size | grep -v /'
+# lists everything sorted by time updated
+alias lt='eza -al --sort=modified'
 
 alias top='top -o cpu'
 alias psql="psql --host=$GUEST_IP"
