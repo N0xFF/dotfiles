@@ -23,10 +23,10 @@ alias qc='QC_MEASURE=true DEBUG=true QUEUES="mailers,default" bundle exec rake q
 
 alias kill-spring='for pid in $(ps -ef | awk "/spring/ {print \$2}"); do kill -9 $pid; done'
 
-alias tt='BACKTRACE=1 t'
+alias tt='HEADLESS=false INSPECTOR=true BACKTRACE=1 t'
 
 function s {
-  DISABLE_SPRING=1 bin/rails server
+  DISABLE_SPRING=1 bundle exec rdbg -O -n -c -- bin/rails server
 }
 
 function t {
@@ -36,7 +36,7 @@ function t {
     local binstub="bin/rails test -w --pride"
   fi
 
-  bin/rake tmp:clear; bin/rails tmp:screenshots:clear; DISABLE_SPRING=1 $binstub ${@:1}
+  bin/rake tmp:clear; bin/rails tmp:screenshots:clear; DISABLE_SPRING=1 eval $binstub ${@:1}
 }
 
 function c {
