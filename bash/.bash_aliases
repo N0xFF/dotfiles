@@ -29,7 +29,13 @@ alias kill-spring='for pid in $(ps -ef | awk "/spring/ {print \$2}"); do kill -9
 
 # Start Rails Server shortcut
 function s {
-  DISABLE_SPRING=1 bundle exec rdbg -O -n -c -- bin/rails server
+  # Silently test a make target
+  make --dry-run start &>/dev/null
+  if [ $? -eq 0 ]; then
+    DISABLE_SPRING=1 make start
+  else
+    DISABLE_SPRING=1 bundle exec rdbg -O -n -c -- bin/rails server
+  fi
 }
 
 # Run Rails tests shortcut
