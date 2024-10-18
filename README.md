@@ -1,8 +1,23 @@
-# dotfiles
+# dotfiles (Ubuntu, bash)
 
-## Add a dotfile
+## Requirments
 
-Edit `files` variable in `makesymlinks.sh`.
+The script will try to install next packages:
+
+- [`stow`](https://github.com/aspiers/stow).
+- [`eza`](https://github.com/eza-community/eza).
+- [`delta`](https://github.com/dandavison/delta).
+
+## Setup
+
+```sh
+git clone https://github.com/N0xFF/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
+```
+
+This will symlink the appropriate files in `.dotfiles` to your home directory.
+Everything is configured and tweaked within `~/.dotfiles`.
 
 ## Codespaces
 

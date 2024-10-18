@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 
-git config --global include.path .git_aliases
+./apt-get.sh
 
-sh makesymlinks.sh
+stow --restow */ \
+  2> >(grep -v 'BUG in find_stowed_path? Absolute/relative mismatch' 1>&2) # https://github.com/aspiers/stow/issues/65
 
-cat <<EOT >> ~/.bashrc
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
-EOT
-
+# Update aliases
 source ~/.bashrc
