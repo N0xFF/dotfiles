@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Use @puppeteer/browsers to system-wide install the latest stable release of Firefox ESR.
+# By default to home directory.
+
+cd ~
+mkdir -p bin
+
+output=($(npx --yes @puppeteer/browsers install firefox@esr)) &&\
+ln -sfv ${output[1]} ~/bin/firefox

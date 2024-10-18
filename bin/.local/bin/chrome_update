@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Use @puppeteer/browsers to system-wide install the latest stable release of Chrome and Chromedriver.
+# By default to home directory.
+
+cd ~
+mkdir -p bin
+
+output=($(npx --yes @puppeteer/browsers install chrome@stable)) &&\
+ln -sfv ${output[1]} ~/bin/chrome &&\
+output=($(npx --yes @puppeteer/browsers install chromedriver@stable)) &&\
+ln -sfv ${output[1]} ~/bin/chromedriver
