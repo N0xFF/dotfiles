@@ -1,0 +1,49 @@
+# Local/private config goes in the include
+[include]
+	path = ~/.gitconfig.local
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	pager = delta
+[pull]
+	# ff = yes
+	# rebase = merges
+	ff = only
+[include]
+	path = ~/.gitalias
+[init]
+	defaultBranch = master
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	ff = no
+	commit = no
+	conflictStyle = zdiff3
+[diff]
+	# tool = vscode
+	algorithm = histogram
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[rebase]
+	autosquash = true
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+[help]
+	autocorrect = prompt
+[delta]
+	navigate = true # use n and N to move between diff sections
+	light = false   # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+[transfer]
+	fsckobjects = true
+[fetch]
+	# https://github.com/git/git/blob/d10e2cb9d0299a26f43d57dd5bdcf2b3f86a30b3/Documentation/config.txt#L1156-L1161
+	# fsckobjects = true
+	prune = true
+[receive]
+	# https://github.com/git/git/blob/d10e2cb9d0299a26f43d57dd5bdcf2b3f86a30b3/Documentation/config.txt#L2322-L2327
+	# fsckobjects = true
+[push]
+	autoSetupRemote = true
