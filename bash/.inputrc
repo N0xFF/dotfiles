@@ -1,0 +1,2 @@
+# Case-insensitive completion in bash
+set completion-ignore-case on
