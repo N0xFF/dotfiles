@@ -36,6 +36,9 @@ symbol = "cobol "
 [conda]
 symbol = "conda "
 
+[container]
+disabled = true
+
 [crystal]
 symbol = "cr "
 
