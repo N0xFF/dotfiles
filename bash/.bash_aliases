@@ -19,7 +19,7 @@ if [ -x "$(command -v eza)" ]; then
   alias lt='eza -al --sort=modified'
 fi
 
-alias top='top -o cpu'
+alias top='top -o +%CPU'
 
 # Connect to host PG in WSL
 if [ -n "$GUEST_IP" ]; then
