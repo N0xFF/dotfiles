@@ -24,3 +24,8 @@ if [ ! -x "$(command -v delta)" ]; then
   wget -P /tmp https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_amd64.deb
   sudo dpkg -i /tmp/git-delta_0.18.2_amd64.deb
 fi
+
+# Install starship
+if [ ! -x "$(command -v starship)" ]; then
+  curl -sS https://starship.rs/install.sh | sh -s -- -y
+fi
