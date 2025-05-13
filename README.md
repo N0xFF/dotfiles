@@ -1,16 +1,9 @@
-# dotfiles (Ubuntu, bash)
+# dotfiles (Ubuntu, Bash)
 
 ## Requirments
 
 A [Nerd Font](https://www.nerdfonts.com/) installed and enabled in your terminal
 (for example, try the [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)).
-
-The script will try to install next packages:
-
-- [`stow`](https://github.com/aspiers/stow).
-- [`eza`](https://github.com/eza-community/eza).
-- [`delta`](https://github.com/dandavison/delta).
-- [`starship`](https://starship.rs).
 
 ## Setup
 
@@ -20,7 +13,14 @@ cd ~/.dotfiles
 ./install.sh
 ```
 
-This will symlink the appropriate files in `.dotfiles` to your home directory.
+The script will try to install next packages:
+
+- [`stow`](https://github.com/aspiers/stow).
+- [`eza`](https://github.com/eza-community/eza).
+- [`delta`](https://github.com/dandavison/delta).
+- [`starship`](https://starship.rs).
+
+And symlink appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
 ## Codespaces
