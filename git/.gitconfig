@@ -41,10 +41,20 @@
 	fsckobjects = true
 [fetch]
 	# https://github.com/git/git/blob/d10e2cb9d0299a26f43d57dd5bdcf2b3f86a30b3/Documentation/config.txt#L1156-L1161
-	# fsckobjects = true
+	# fsckObjects = true
 	prune = true
 [receive]
 	# https://github.com/git/git/blob/d10e2cb9d0299a26f43d57dd5bdcf2b3f86a30b3/Documentation/config.txt#L2322-L2327
-	# fsckobjects = true
+	# fsckObjects = true
 [push]
 	autoSetupRemote = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[fetch "fsck"]
+	# Fix "zeroPaddedFilemode: contains zero-padded file modes" error when cloning a repo
+	zeroPaddedFilemode = warn
