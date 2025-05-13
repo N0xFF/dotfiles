@@ -1,4 +1,4 @@
-# dotfiles (Ubuntu, Arch, and bash)
+# dotfiles (Ubuntu, bash)
 
 ## Requirments
 
