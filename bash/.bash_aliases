@@ -3,6 +3,11 @@ if [ -f ~/.bash_aliases.local ]; then
     . ~/.bash_aliases.local
 fi
 
+# Replace for "cd"
+if [ -x "$(command -v zoxide)" ]; then
+  alias cd='z'
+fi
+
 # Replace for "ls"
 # Must be instaled first: https://github.com/eza-community/eza
 if [ -x "$(command -v eza)" ]; then
