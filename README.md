@@ -23,11 +23,6 @@ The script will try to install next packages:
 And symlink appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
-## Manual install
-
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [fzf](https://github.com/junegunn/fzf)
-
 ## Codespaces
 
 Enable Dotfiles in [settings](https://github.com/settings/codespaces).
