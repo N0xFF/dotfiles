@@ -15,6 +15,7 @@
 	ff = only
 [init]
 	defaultBranch = master
+	templateDir = ~/.git-template
 [interactive]
 	diffFilter = delta --color-only
 [merge]
