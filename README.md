@@ -1,9 +1,11 @@
 # dotfiles (Ubuntu, Bash)
 
-## Requirments
+Personal shell settings with a simple installer.
 
-A [Nerd Font](https://www.nerdfonts.com/) installed and enabled in your terminal
-(for example, try the [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)).
+## Before you start
+
+Install and enable a [Nerd Font](https://www.nerdfonts.com/font-downloads) in
+your terminal.
 
 ## Setup
 
@@ -20,9 +22,9 @@ The script will try to install next packages:
 - [`delta`](https://github.com/dandavison/delta).
 - [`starship`](https://starship.rs).
 
-And symlink appropriate files in `.dotfiles` to your home directory.
-Everything is configured and tweaked within `~/.dotfiles`.
+The script also creates symlinks in your home directory for the relevant files
+in `~/.dotfiles`. Customize them in `~/.dotfiles`.
 
 ## Codespaces
 
-Enable Dotfiles in [settings](https://github.com/settings/codespaces).
+Enable dotfiles in your [Codespaces settings](https://github.com/settings/codespaces).
